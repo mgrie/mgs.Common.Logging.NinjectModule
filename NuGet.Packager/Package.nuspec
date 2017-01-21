@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>mgs.Common.Logging.Ninject</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>mgs.Common.Logging.Ninject</title>
     <authors>Marco Grießhammer</authors>
     <owners>mgrie</owners>
@@ -17,7 +17,7 @@
     <language>en-US</language>
     <projectUrl>https://github.com/mgrie/mgs.Common.Logging.NinjectModule</projectUrl>
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/mgrie/mgs.Common.Logging.NinjectModule/blob/master/LICENSE.txt</licenseUrl>
     <copyright>Copyright  2017</copyright>
     <dependencies>
@@ -25,7 +25,7 @@
           <dependency id="Ninject" />
     </dependencies>
     <references></references>
-    <tags></tags>
+    <tags>Ninject Common.Logging logging log</tags>
   </metadata>
   <files>
     <file src="lib\" target="lib" />
