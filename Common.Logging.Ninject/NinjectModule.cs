@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Common.Logging.Ninject
 {
@@ -9,7 +6,21 @@ namespace Common.Logging.Ninject
     {
         public override void Load()
         {
-            throw new NotImplementedException();
+            Bind<ILog>().ToMethod(ctx =>
+            {
+                ILog result;
+                if (ctx.Request.ParentContext != null)
+                {
+                    Type type = ctx.Request.ParentContext.Request.Service;
+                    result = LogManager.GetLogger(type);
+                }
+                else
+                {
+                    result = LogManager.GetLogger("DefaultWebsiteLogger");
+                }
+
+                return result;
+            });
         }
     }
 }
