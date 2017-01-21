@@ -2,8 +2,14 @@
 
 namespace Common.Logging.Ninject
 {
+    /// <summary>
+    /// NinjectModule for Common.Logging.ILog Binding
+    /// </summary>
     public class NinjectModule : global::Ninject.Modules.NinjectModule
     {
+        /// <summary>
+        /// Load Method for Common.Logging.ILog Binding
+        /// </summary>
         public override void Load()
         {
             Bind<ILog>().ToMethod(ctx =>
