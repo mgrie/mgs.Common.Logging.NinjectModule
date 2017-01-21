@@ -16,7 +16,7 @@ namespace Common.Logging.Ninject
                 }
                 else
                 {
-                    result = LogManager.GetLogger("DefaultWebsiteLogger");
+                    result = LogManager.GetLogger(Properties.Settings.Default.DefaultLoggerName);
                 }
 
                 return result;
